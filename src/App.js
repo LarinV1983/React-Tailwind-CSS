@@ -1,10 +1,10 @@
-
+ import Wrapper from './componets/wrapper';
 function App() {
   return (
-   <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  );
+   <Wrapper>
+  Hello world!
+   </Wrapper>
+  )  
 }
 
 export default App;
