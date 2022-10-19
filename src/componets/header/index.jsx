@@ -6,8 +6,11 @@ export default function Header() {
 	return (
 		<header className = 'flex'>
 			<LogoIcon />
-			<nav>
-				<Navigation />
+			<nav className='flex'>
+				<Navigation text='Features' />
+				<Navigation text='Company' />
+				<Navigation text='Careers' />
+				<Navigation text='About' />
 			</nav>
 		</header>
 	);
