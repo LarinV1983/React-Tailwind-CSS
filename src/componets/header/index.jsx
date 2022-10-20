@@ -3,10 +3,13 @@ import { ReactComponent as LogoIcon } from '../../images/logo.svg';
 import Navigation from '../navigation';
 import NavMenu from '../navMenu';
 import Button from '../button';
+import  MobileMenu from '../mobileMenu';
 import { COMPANY, FEATURES } from './constant';
 import { ReactComponent as MenuIcon } from '../../images/icon-menu.svg'; 
+import { ReactComponent as CloseMenuIcon } from '../../images/icon-close-menu.svg'; 
 
 export default function Header() {
+	const [MobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 	return (
 		<header className = 'flex items-center'>
 			<LogoIcon />
@@ -26,9 +29,13 @@ export default function Header() {
 				<Button>Loggin</Button>
 				<Button hasBorder={true}>Register</Button>
 			</div>
-			<div className='flex xl:hidden ml-auto cursor-pointer z-30'>
-				<MenuIcon/>
+			<div className='flex xl:hidden ml-auto cursor-pointer z-30'
+			onClick={()=>setMobileMenuOpen(!MobileMenuOpen)}
+			>
+				{MobileMenuOpen ? <CloseMenuIcon/> : <MenuIcon/>}
 			</div>
+			<MobileMenu isOpen={MobileMenuOpen}/>
+
 		</header>
 	);
 }
