@@ -5,8 +5,8 @@ module.exports = {
   ],
   theme: {
     screens:{
-      bigwin:'1440px',
-      medium: '1024px'
+      'xl':'1440px',
+      'md':'1024px'
     },
     extend: {
       colors:{
