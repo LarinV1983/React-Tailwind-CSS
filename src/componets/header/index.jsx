@@ -35,7 +35,6 @@ export default function Header() {
 				{MobileMenuOpen ? <CloseMenuIcon/> : <MenuIcon/>}
 			</div>
 			<MobileMenu isOpen={MobileMenuOpen}/>
-
 		</header>
 	);
 }

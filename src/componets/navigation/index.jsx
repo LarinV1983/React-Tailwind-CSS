@@ -8,7 +8,7 @@ export default function Navigation({text='', children}) {
 	return (
 		<div className='relative'>
 			<div className='flex space-x-2 cursor-pointer items-center'>
-				<span className='text-medium-gray 
+				<span className='text-gray 
 				hover:text-almost-black'
 				onClick={()=> children && setSelected(text !== selected ? text : '')}>
 				{text}
