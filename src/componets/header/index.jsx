@@ -4,12 +4,13 @@ import Navigation from '../navigation';
 import NavMenu from '../navMenu';
 import Button from '../button';
 import { COMPANY, FEATURES } from './constant';
+import { ReactComponent as MenuIcon } from '../../images/icon-menu.svg'; 
 
 export default function Header() {
 	return (
 		<header className = 'flex items-center'>
 			<LogoIcon />
-			<nav className='flex space-x-6 ml-8 items-center'>
+			<nav className='hidden xl:flex space-x-6 ml-8 items-center'>
 				<Navigation text='Features' >
 				<NavMenu items= {FEATURES} />
 				</Navigation>
@@ -21,9 +22,12 @@ export default function Header() {
 				<Navigation text='About'>
 				</Navigation>
 			</nav>
-			<div className='flex ml-auto cursor-pointer space-x-5'>
+			<div className='hidden xl:flex ml-auto cursor-pointer space-x-5'>
 				<Button>Loggin</Button>
 				<Button hasBorder={true}>Register</Button>
+			</div>
+			<div className='flex xl:hidden ml-auto cursor-pointer z-30'>
+				<MenuIcon/>
 			</div>
 		</header>
 	);
